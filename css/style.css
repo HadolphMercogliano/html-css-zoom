@@ -1,10 +1,66 @@
 /* Variables */
 :root {
-    --primary: red;
+    --white: white;
 }
 
 /* Generics */
+.green {
+    color: #4ccb00;
+}
 
-/* Header */
+.red {
+    color: red;
+}
 
-/* Main */
+body {
+    background-color: black;
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+header {
+    height: 50px;
+    background-color: black;
+}
+
+header div {
+    position: fixed;
+    width: 100%;
+    top: 10px;
+    text-align: right;
+}
+
+header span {
+    background-color: #4a4a4a;
+    padding: var(--paddings);
+    border-radius: 5px;
+}
+
+/* MAIN */
+
+/* FOOTER */
+footer {
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    line-height: 60px;
+    font-size: 1.5rem;
+    background-color: #222222;
+    justify-content: space-between;
+}
+
+.end-meeting {
+    background-color: #4a4a4a;
+    padding: var(--paddings);
+    font-size: .5rem;
+    line-height: 50px;
+}
+
+footer span {
+    font-size: .5rem;
+}
+
+footer div {}
