@@ -1,6 +1,7 @@
 /* Variables */
 :root {
     --white: white;
+    --red: red;
     --paddingxs: 2px 5px;
 }
 
@@ -10,7 +11,7 @@
 }
 
 .red {
-    color: red;
+    color: var(--red);
 }
 
 body {
@@ -51,7 +52,7 @@ main {
     row-gap: 5px;
     column-gap: 5px;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
 }
 
 main>.card {
@@ -59,12 +60,9 @@ main>.card {
 }
 
 .card {
+    width: calc(100% / 7 - 10px);
     position: relative;
     /* background-color: antiquewhite; */
-}
-
-.card>img {
-    object-fit: cover;
 }
 
 .card .user-name {
