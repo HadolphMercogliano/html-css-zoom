@@ -1,6 +1,7 @@
 /* Variables */
 :root {
     --white: white;
+    --paddingxs: 2px 5px;
 }
 
 /* Generics */
@@ -18,14 +19,19 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.containerd {
+    width: 100vw;
+}
+
 /* HEADER */
 header {
     height: 50px;
     background-color: black;
+    line-height: 50px;
+
 }
 
 header div {
-    position: fixed;
     width: 100%;
     top: 10px;
     text-align: right;
@@ -38,6 +44,38 @@ header span {
 }
 
 /* MAIN */
+main {
+    height: calc(100vh - 50px - 70px);
+    overflow: auto;
+    flex-wrap: wrap;
+    row-gap: 5px;
+    column-gap: 5px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+main>.card {
+    display: flex;
+}
+
+.card {
+    position: relative;
+    /* background-color: antiquewhite; */
+}
+
+.card>img {
+    object-fit: cover;
+}
+
+.card .user-name {
+    position: absolute;
+    background-color: rgba(74, 74, 74, 0.5);
+    padding: var(--paddingxs);
+    font-size: 0.7rem;
+    bottom: 5px;
+    left: 0;
+
+}
 
 /* FOOTER */
 footer {
@@ -61,6 +99,7 @@ footer span {
 }
 
 .icons {
+    margin: 0 10px;
     gap: 10px;
     text-align: center;
     align-items: center;
