@@ -2,12 +2,15 @@
 :root {
     --white: white;
     --red: red;
+    --green: #4ccb00;
     --paddingxs: 2px 5px;
+    --header-height: 50px;
+    --footer-height: 70px;
 }
 
 /* Generics */
 .green {
-    color: #4ccb00;
+    color: var(--green);
 }
 
 .red {
@@ -20,15 +23,11 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.containerd {
-    width: 100vw;
-}
-
 /* HEADER */
 header {
-    height: 50px;
+    height: var(--header-height);
     background-color: black;
-    line-height: 50px;
+    line-height: var(--header-height);
 
 }
 
@@ -46,13 +45,16 @@ header span {
 
 /* MAIN */
 main {
-    height: calc(100vh - 50px - 70px);
+    height: calc(100vh - var(--header-height) - var(--footer-height));
     overflow: auto;
+
+}
+
+main>.container {
     flex-wrap: wrap;
-    row-gap: 5px;
-    column-gap: 5px;
+    gap: 5px;
     justify-content: center;
-    align-items: center;
+    align-content: center;
 }
 
 main>.card {
@@ -60,7 +62,7 @@ main>.card {
 }
 
 .card {
-    width: calc(100% / 7 - 10px);
+    width: 200px;
     position: relative;
     /* background-color: antiquewhite; */
 }
@@ -103,6 +105,18 @@ footer span {
     align-items: center;
 }
 
+.icons>div {
+    display: flex;
+    flex-direction: column;
+    column-gap: 15px;
+    row-gap: 5px;
+    justify-content: center;
+}
+
+.icons i {
+    font-size: 1.5rem;
+}
+
 .share-screen {
-    color: #4ccb00;
+    color: var(--green);
 }
